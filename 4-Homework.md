@@ -6,7 +6,7 @@
 
 * Python Math Module.
 
-* import math
+    #### import math
     #### print('Square root ...' math.sqrt(144))
     #### print('Square ...', 12.0**2)
 
@@ -47,3 +47,5 @@
 * NumPy arrays occupy less memory as compared to list.
 
 ### 12 When creating an "empty" array, where do the elements come from?
+
+* The elements are random and depen on the state of the memory. 
