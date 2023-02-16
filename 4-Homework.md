@@ -48,4 +48,4 @@
 
 ### 12 When creating an "empty" array, where do the elements come from?
 
-* The elements are random and depen on the state of the memory. 
+* The elements are random and depends on the state of the memory. 
