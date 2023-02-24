@@ -7,7 +7,7 @@ print("Current Date and Time ...", a)
 
 from datetime import date
 today = date.today()
-print("Current month:", today.month)
+print(today.strftime("%B\n"))
 
 # 2. Write a simple function that takes 2 parameters -- a first name and a day name.
 def message(fname, day_name):
@@ -21,6 +21,7 @@ def message(fname, day_name):
 def greeting(f_Name, day_name):
 
     print("Hi", f_Name, "!! Happy", day_name, "!!")
+    print('Hi', f_Name)
 
 greeting("Jarvis", "Sunday")
 greeting("Jarvis", "")
