@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/bojack/Downloads/week7database.sqlite" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1020"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,11:mainDepartments"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- What is a student's average grade
+
+SELECT s.StudentName
+	,avg(g.grade) AS GPA 
+	FROM Students s
+		INNER JOIN Grades g
+			ON s.StudentId = g.StudentId
+	GROUP BY s.StudentName
+	ORDER BY avg(g.grade) desc
+	
+</sql><sql name="SQL 3">-- What department has the highest average grade?
+
+SELECT Departments
+	,AVG(g.grade) AS avg_grade
+	FROM Grades
+	GROUP BY Departments
+	ORDER BY avg_grade DESC
+Limit 1;
+	</sql><sql name="SQL 4">-- What student has the single highest grade? 
+
+SELECT s.StudentName
+	,Max(g.grade) As highest_grade
+	From Grades
+	Group By s.StudentName
+	Order By highest_grade DESC
+	LIMIT 1;</sql><current_tab id="2"/></tab_sql></sqlb_project>
